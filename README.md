@@ -1,5 +1,5 @@
 # debug
-Container image with various debugging utilities including AWCLI, jq, curl,
+Container image with various debugging utilities including AWSCLI, jq, curl,
 wget, dig, rg, vim, etc.
 
 ## Usage
