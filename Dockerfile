@@ -1,35 +1,19 @@
 FROM alpine:3.14
 
-# install aws cli latest version
 RUN apk --no-cache add \
     python3 \
     py3-pip \
     && pip install --no-cache-dir --upgrade pip \
     && pip install --no-cache-dir awscli
 
-# install jq
 RUN apk --no-cache add jq
-
-# install curl
 RUN apk --no-cache add curl
-
-# install dig
 RUN apk --no-cache add bind-tools
-
-# install ripgrep
 RUN apk --no-cache add ripgrep
-
-# install neovim
 RUN apk --no-cache add neovim
-
-# alias vim to nvim
-RUN ln -s /usr/bin/nvim /usr/bin/vim
-
-# install psql
 RUN apk --no-cache add postgresql-client
-
-# install bash
 RUN apk --no-cache add bash
 
-# wait in loop forever
+RUN ln -s /usr/bin/nvim /usr/bin/vim
+
 CMD ["tail", "-f", "/dev/null"]
