@@ -10,9 +10,9 @@ RUN apk --no-cache add jq
 RUN apk --no-cache add curl
 RUN apk --no-cache add bind-tools
 RUN apk --no-cache add ripgrep
-RUN apk --no-cache add neovim
 RUN apk --no-cache add postgresql-client
 RUN apk --no-cache add bash
+RUN apk --no-cache add neovim
 
 RUN ln -s /usr/bin/nvim /usr/bin/vim
 
