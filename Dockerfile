@@ -25,5 +25,11 @@ RUN apk --no-cache add neovim
 # alias vim to nvim
 RUN ln -s /usr/bin/nvim /usr/bin/vim
 
+# install psql
+RUN apk --no-cache add postgresql-client
+
+# install bash
+RUN apk --no-cache add bash
+
 # wait in loop forever
 CMD ["tail", "-f", "/dev/null"]
