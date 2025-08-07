@@ -13,6 +13,7 @@ RUN apk --no-cache add ripgrep
 RUN apk --no-cache add postgresql-client
 RUN apk --no-cache add bash
 RUN apk --no-cache add neovim
+RUN apk --no-cache add hey
 
 RUN ln -s /usr/bin/nvim /usr/bin/vim
 
